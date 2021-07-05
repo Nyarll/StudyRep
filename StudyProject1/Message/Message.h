@@ -1,5 +1,9 @@
 #pragma once
 
+// Create : 2021/07/05
+// Update : 2021/07/05
+// Author : Nyarll Creative / UNLUCKY
+
 #ifndef MESSAGE_DEFINED
 #define MESSAGE_DEFINED
 
