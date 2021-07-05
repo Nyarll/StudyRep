@@ -12,6 +12,9 @@
     <Filter Include="Sort">
       <UniqueIdentifier>{88385bef-3b00-4b15-aa2f-af857bd13e2d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Message">
+      <UniqueIdentifier>{e019f8d1-832c-4cc0-8bc4-f0cb03d9c538}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -20,10 +23,16 @@
     <ClCompile Include="Sort\Sort.cpp">
       <Filter>Sort</Filter>
     </ClCompile>
+    <ClCompile Include="Message\Message.cpp">
+      <Filter>Message</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sort\Sort.h">
       <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="Message\Message.h">
+      <Filter>Message</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

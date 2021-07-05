@@ -2,6 +2,7 @@
 #include <array>
 
 #include "Sort/Sort.h"
+#include "Message/Message.h"
 
 // <配列の要素を表示>
 template <typename T>
@@ -17,17 +18,9 @@ void ShowArray(T* arr, int size)
 
 int main()
 {
-	// <配列>
-	int numbers[10] = { 4,8,1,2,7, 6,9,3,5,10 };
+	Message message("Apple : %d", 12);
 
-	// <ソート前の配列を確認>
-	ShowArray(numbers, 10);
-
-	// <選択ソート>
-	SORT::SelectionSort(numbers, 10);
-
-	// <ソート後の配列を確認>
-	ShowArray(numbers, 10);
+	std::cout << message.GetValue() << std::endl;
 
 	return 0;
 }
