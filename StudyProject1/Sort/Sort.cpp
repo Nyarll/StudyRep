@@ -1,5 +1,20 @@
 #include "Sort.h"
 
+// <バブルソート>
+void SORT::BubbleSort(int numbers[], int array_size)
+{
+	for (int i = 0; i < (array_size - 1); i++)
+	{
+		for (int k = (array_size - 1); k > i; k--)
+		{
+			if (numbers[k - 1] > numbers[k])
+			{
+				Swap(numbers[k - 1], numbers[k]);
+			}
+		}
+	}
+}
+
 // <選択ソート>
 void SORT::SelectionSort(int numbers[], int array_size)
 {
@@ -15,9 +30,6 @@ void SORT::SelectionSort(int numbers[], int array_size)
 				min = k;
 			}
 		}
-
-		swap = numbers[i];
-		numbers[i] = numbers[min];
-		numbers[min] = swap;
+		Swap(numbers[i], numbers[min]);
 	}
 }
