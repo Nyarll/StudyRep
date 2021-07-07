@@ -1,5 +1,6 @@
 #include <iostream>
 #include <array>
+#include <sstream>
 
 #include "Sort/Sort.h"
 #include "Message/Message.h"
@@ -16,11 +17,30 @@ void ShowArray(T* arr, int size)
 	std::cout << "\n";
 }
 
+void print() {}
+
+template <typename Head, typename... Tail>
+void print(Head&& head, Tail&&... tail)
+{
+	std::cout << head << " ";
+	print(std::forward<Tail>(tail)...);
+}
+
+template <typename Head, typename... Tail>
+std::string GetString(Head&& head, Tail&&... tail)
+{
+	std::ostringstream oss;
+	oss << head << GetString(std::forward<Tail>(tail)...);
+
+	return oss.str();
+}
+
 int main()
 {
-	Message message("Apple : %d", 12);
+	
+	std::string str = GetString("�̗́F", 1200);
 
-	std::cout << message.GetValue() << std::endl;
+	std::cout << str;
 
 	return 0;
 }
