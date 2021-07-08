@@ -26,6 +26,14 @@ namespace SORT
 	// <選択ソート>
 	// SelectionSort(配列, 配列サイズ)
 	void SelectionSort(int numbers[], int array_size);
+
+	// <挿入ソート>
+	// InsertionSort(配列, 配列サイズ)
+	void InsertionSort(int numbers[], int array_size);
+
+	// <シェルソート>
+	// ShellSort(配列, 配列サイズ)
+	void ShellSort(int numbers[], int array_size);
 }
 
 #endif // SORT
