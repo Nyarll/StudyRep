@@ -34,6 +34,13 @@ namespace SORT
 	// <シェルソート>
 	// ShellSort(配列, 配列サイズ)
 	void ShellSort(int numbers[], int array_size);
+
+	// <クイックソート>
+	// QuickSort(配列, 配列サイズ)
+	void QuickSort(int numbers[], int array_size);
+
+	// <クイックソート用関数>
+	void _q_sort(int numbers[], int left, int right);
 }
 
 #endif // SORT

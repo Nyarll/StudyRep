@@ -52,7 +52,7 @@ int main()
 
 	ShowArray(num, 10);
 
-	SORT::ShellSort(num, 10);
+	SORT::QuickSort(num, 10);
 
 	ShowArray(num, 10);
 

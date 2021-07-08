@@ -77,3 +77,46 @@ void SORT::ShellSort(int numbers[], int array_size)
 			increment = 1;
 	}
 }
+
+void SORT::QuickSort(int numbers[], int array_size)
+{
+	_q_sort(numbers, 0, array_size - 1);
+}
+
+void SORT::_q_sort(int numbers[], int left, int right)
+{
+	int pivot = numbers[left];
+	int left_hold = left;
+	int right_hold = right;
+
+	while (left < right)
+	{
+		while ((numbers[right] >= pivot) && (left < right))
+			right--;
+
+		if (left != right)
+		{
+			numbers[left] = numbers[right];
+			left++;
+		}
+
+		while ((numbers[left] <= pivot) && (left < right))
+			left++;
+
+		if (left != right)
+		{
+			numbers[right] = numbers[left];
+			right--;
+		}
+	}
+
+	numbers[left] = pivot;
+	pivot = left;
+	left = left_hold;
+	right = right_hold;
+
+	if (left < pivot)
+		_q_sort(numbers, left, pivot - 1);
+	if (right < pivot)
+		_q_sort(numbers, pivot + 1, right);
+}
