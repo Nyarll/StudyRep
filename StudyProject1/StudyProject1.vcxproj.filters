@@ -15,6 +15,9 @@
     <Filter Include="Message">
       <UniqueIdentifier>{e019f8d1-832c-4cc0-8bc4-f0cb03d9c538}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Random">
+      <UniqueIdentifier>{66f77601-a474-4433-a8cd-f031eac519b5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -26,6 +29,9 @@
     <ClCompile Include="Message\Message.cpp">
       <Filter>Message</Filter>
     </ClCompile>
+    <ClCompile Include="Random\Random.cpp">
+      <Filter>Random</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sort\Sort.h">
@@ -33,6 +39,9 @@
     </ClInclude>
     <ClInclude Include="Message\Message.h">
       <Filter>Message</Filter>
+    </ClInclude>
+    <ClInclude Include="Random\Random.h">
+      <Filter>Random</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

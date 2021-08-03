@@ -4,13 +4,15 @@
 
 #include "Sort/Sort.h"
 #include "Message/Message.h"
+#include "Random/Random.h"
 
 template <typename T>
 void ShuffleArray(T arr[], int size)
 {
+	Random random;
 	for (int i = 0; i < size; i++)
 	{
-		int index = rand() % size;
+		int index = random.Range(0, size - 1);
 		SORT::Swap(arr[i], arr[index]);
 	}
 }
@@ -47,14 +49,15 @@ std::string GetString(Head&& head, Tail&&... tail)
 
 int main()
 {
-	int num[10] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
-	ShuffleArray(num, 10);
+	int max = 40;
 
-	ShowArray(num, 10);
+	Random random;
 
-	SORT::QuickSort(num, 10);
-
-	ShowArray(num, 10);
+	for (int i = 0; i < 20; i++)
+	{
+		std::cout << random.Range(max / 2, max) << ", ";
+	}
+	std::cout << std::endl;
 
 	return 0;
 }
